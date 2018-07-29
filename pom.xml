@@ -8,6 +8,11 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>mybatis-gen</module>
+        <module>common</module>
+        <module>mapper</module>
+        <module>mini-api</module>
+        <module>pojo</module>
+        <module>service</module>
     </modules>
     <packaging>pom</packaging>
 
