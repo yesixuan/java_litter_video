@@ -4,6 +4,8 @@ import cn.vic.pojo.Users;
 import cn.vic.service.UserService;
 import cn.vic.utils.IMoocJSONResult;
 import cn.vic.utils.MD5Utils;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,11 +13,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Api(value = "用户注册登录的接口", tags = {"注册和登录的controller"})
 public class RegistLoginController {
 
     @Autowired
     private UserService userService;
 
+    @ApiOperation(value = "用户注册", notes = "用户注册的接口")
     @PostMapping("/regist")
     public IMoocJSONResult regist(@RequestBody Users user) throws Exception {
         // 1. 判空
