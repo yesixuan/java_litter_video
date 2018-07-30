@@ -1,14 +1,15 @@
-package cn.vic.service;
+package cn.vic.service.impl;
 
 import cn.vic.mapper.UsersMapper;
 import cn.vic.pojo.Users;
+import cn.vic.service.UserService;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
+@Service(value = "userservice")
 public class UserServiceImpl implements UserService {
 
     @Autowired
